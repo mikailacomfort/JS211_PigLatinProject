@@ -11,15 +11,72 @@ const rl = readline.createInterface({
 });
 
 
-const pigLatin = (word) => {
 
-  // Your code here
+function translateToPigLatin() {
+  // Get the user input from the input field
+  const userInput = document.getElementById('user-input').value.trim().toLowerCase();
+  
 
+  // Define a regular expression to find vowels
+  const vowelRegex = /[aeiou]/i;
+
+  // Translate the word to Pig Latin
+  let translatedWord;
+  if (userInput[0].match(vowelRegex)) {
+      translatedWord = userInput + 'yay';
+  } else {
+      const firstVowelIndex = userInput.search(vowelRegex);
+      translatedWord = userInput.slice(firstVowelIndex) + userInput.slice(0, firstVowelIndex) + 'ay';
+  }
+
+  // Update the translation result in the div
+  document.getElementById('translationResultWindow').innerText = translatedWord;
 }
+
+
+////NODE
+
+function pigLatin(answer) {
+  // Get the user input from the input field
+  const userInput = answer.trim().toLowerCase();
+  
+
+  // Define a regular expression to find vowels
+  const vowelRegex = /[aeiou]/i;
+
+  // Translate the word to Pig Latin
+  let translatedWord;
+  if (userInput[0].match(vowelRegex)) {
+      translatedWord = userInput + 'yay';
+  } else {
+      const firstVowelIndex = userInput.search(vowelRegex);
+      translatedWord = userInput.slice(firstVowelIndex) + userInput.slice(0, firstVowelIndex) + 'ay';
+  }
+  return translatedWord;
+}
+
+
+
+
 
 // the first function called in the program to get an input from the user
 // to run the function use the command: node main.js
 // to close it ctrl + C
+
+
+// create two variables, array vowels and function newString
+// write a conditional that looks at the first character of the string input
+// if starts with a vowel, add "way"
+//else 
+//find the number of consonants before the first vowel indexOf() match() regex
+//start pig latin string with first vowel until the end
+//add letters before first vowel to the end
+//add "ay to end of string" substr()
+//return newString
+
+
+
+
 const getPrompt = () => {
   rl.question('word ', (answer) => {
     console.log( pigLatin(answer) );
@@ -55,6 +112,8 @@ if (typeof describe === 'function') {
   getPrompt();
 
 }
+
+
 
 
 
