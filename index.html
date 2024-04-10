@@ -2,17 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Didact+Gothic&display=swap" rel="stylesheet">    
+    <title>Pig Latin GUI</title>
     <script defer src="main.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Welcome to the pig latin translator!</h1>
     <hr/>
     <div id="display-element"></div>
     <form>
-      <label for="user-input">Enter a word:</label>
+      <!-- <label for="user-input">Enter a word:</label> -->
       <input type="text" id="user-input" placeholder="Enter a word">
-      <button onclick="translateToPigLatin()">Translate</button>
+      <button onclick="translateToPigLatin()" type="button">Translate</button>
       <div id="translationResultWindow"></div>
     </form>  
     <hr/>

@@ -31,6 +31,7 @@ function translateToPigLatin() {
 
   // Update the translation result in the div
   document.getElementById('translationResultWindow').innerText = translatedWord;
+  console.log(translatedWord);
 }
 
 
@@ -54,8 +55,6 @@ function pigLatin(answer) {
   }
   return translatedWord;
 }
-
-
 
 
 

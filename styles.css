@@ -1,0 +1,94 @@
+html {
+  min-width: 449px;
+}
+
+body {
+  background: url("AdobeStock_99178960.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+  background-color: #f5f5f5;
+  flex-direction: column;
+  margin-right: 8%;
+}
+
+h1 {
+  font-size: 40px;
+  text-shadow: 3px 3px 3px white;
+}
+.container {
+  text-align: center;
+}
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px #0056b3;
+  
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px white;
+}
+button:hover {
+  background-color: #0056b3;
+}
+#translationResultWindow {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: right;
+}
+
+@media (max-width: 670px) {
+ 
+  body {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    display: block;
+    margin: 0 auto;
+  }
+
+  input[type="text"] {
+    display: block;
+    margin: auto;
+  }
+
+  button {
+    margin-top: 10px;
+    margin-left: 35%;
+    display: block;
+  }
+
+  #translationResultWindow {
+    text-align: center;
+  }
+}
